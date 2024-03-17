@@ -9,7 +9,7 @@ mirth450
 
 Lancer le docker compose mirth450
 =================================
-docker-compose up -d -f docker-compose_mirth450.yml
+docker-compose -f docker-compose_mirth450.yml up -d
 
 Utilisation
 ===========

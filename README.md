@@ -31,17 +31,27 @@ Les livrables comprennent :
 - le docker-compose `kafka-init/docker-compose.yml` adapté
 - le script sh `kafka-init/create-topics.sh` pour la creation des topics Kafka
 - le script SQL `script-sql/database.sql` pour la création de la base de données
-- le `rapport` de projet répondant aux questions posées
+- le rapport de projet répondant aux questions posées
 - et ce `README.md` contenant les informations sur le projet et l'équipe de développement
+
+# Cloner le projet
+
+- Cloner le projet avec `git clone https://github.com/mayel15/projet-intergiciel.git`
+
+# Mirth Connect
+
+- Suivre les instructions du `MIRTH450_docker/README.txt` pour configurer **Mirth** avec `Docker`
+- Lancer **Mirth** et importer le channel `mirth/Export_channel_mirth.xml` puis configurer les chemins `IN` et `OUT` des fichiers HL7 (`mirth/echantillonshl7.zip`)
+- Exécuter le script `script-sql/database.sql` dans la base de données (avec `DBeaver` par exemple) pour la création des tables
+- Ouvrir les deux sous projets (dossiers) séparément `Pr1` et `Cs1`; et les lancer séparément
+- Ainsi, les données traitées avec **Mirth** sont mis dans les tables SQL depuis le `Cs1`
 
 # Console text 
 
 ## Run
-
-- Cloner le projet avec `git clone https://github.com/mayel15/projet-intergiciel.git`
 - Exécuter dans le dossier `kafka-init` du projet `docker-compose up -d` qui va permettre de démarrer mirth connect (au port `8444`), une base de données postgresql version 16, la database est stockée en local, elle est accessible via le port `5435` en externe, et va créer les topics `topic1`, `topic2`, `topic3` dans **Kafka**
-- Exécuter le script `script-sql/database.sql` dans la base de données pour la création des tables. Décommenter la partie de peupleument de la satabase, si c'est pour travailler de manière indépendante des données de récupéreées depuis **mirth**
-- Ouvrir les deux sous projets (dossiers) séparément `consumer2-producer3` et `producer2-consumer3-cs`; et les lancer séparament
+- Exécuter le script `script-sql/database.sql` dans la base de données pour la création des tables en décommentant la partie de peupleument de la database, si c'est pour travailler de manière indépendante des données de récupéreées depuis **mirth**
+- Ouvrir les deux sous projets (dossiers) séparément `consumer2-producer3` et `producer2-consumer3-cs`; et les lancer séparément
 - La console text sera disponible au niveau du run du projet `producer2-consumer3-cs`
   
 ## Commandes disponibles
