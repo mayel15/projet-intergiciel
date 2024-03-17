@@ -39,20 +39,20 @@ Les livrables comprennent :
 ## Run
 
 - Cloner le projet avec `git clone https://github.com/mayel15/projet-intergiciel.git`
-- Exécuter à la racine du projet `docker-compose up -d` qui va permettre de démarrer mirth connect (au port `8444`) et une base de données postgresql version 16, la database est stockée en local, elle est accessible via le port `5435` en externe.
-- Exécuter le script `database.sql` dans la base de données pour la création des tables. Décommenter la partie de peupleument de la satabase, si c'est pour travailler de manière indépendante des données de récupéreées depuis `mirth` 
+- Exécuter à la racine du projet `docker-compose up -d` qui va permettre de démarrer mirth connect (au port `8444`), une base de données postgresql version 16, la database est stockée en local, elle est accessible via le port `5435` en externe, et va créer les topics `topic1`, `topic2`, `topic3` dans **Kafka**
+- Exécuter le script `database.sql` dans la base de données pour la création des tables. Décommenter la partie de peupleument de la satabase, si c'est pour travailler de manière indépendante des données de récupéreées depuis **mirth** 
 - Ouvrir les deux sous projets (dossiers) séparément `consumer2-producer3` et `producer2-consumer3-cs`; et les lancer séparament
 - La console text sera disponible au niveau du run du projet `producer2-consumer3-cs`
   
 ## Commandes disponibles
-- `get_all_patients` : retourne tous les patients
-- `get_patient_by_pid` : retourne l'identité complète d'un patient par son identifiant PID-3
+- **`get_all_patients`** : retourne tous les patients
+- **`get_patient_by_pid`** : retourne l'identité complète d'un patient par son identifiant PID-3
 - get_patient_by_name : retourne l'identité d'un patient par son nom
-- `get_patient_stay_by_pid` : retourne les séjours d'un patient par son identifiant PID-3
-- `get_patient_movements_by_sid` : retourne tous les mouvements d'un patient par le numéro de séjour
-- `export` : exporte les données de la base de données en JSON dans un fichier
-- `help` : affiche la liste des commandes et une explication comme ci-dessus
-- `exit` : quitte la console
+- **`get_patient_stay_by_pid`** : retourne les séjours d'un patient par son identifiant PID-3
+- **`get_patient_movements_by_sid`** : retourne tous les mouvements d'un patient par le numéro de séjour
+- **`export`** : exporte les données de la base de données en JSON dans un fichier
+- **`help`** : affiche la liste des commandes et une explication comme ci-dessus
+- **`exit`** : quitte la console
 
 ## Demo de la console text
 ![console demo](assets/console-demo.gif)
