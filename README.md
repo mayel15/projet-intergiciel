@@ -4,9 +4,9 @@
 | ![Alaaeddin ALMAJJO](https://avatars.githubusercontent.com/u/77294802?v=4)  | ![Ayman DOULKOM](https://avatars.githubusercontent.com/u/116734751?v=4)          | ![Pape THIAM](https://avatars.githubusercontent.com/u/97792012?v=4) |
 | :--------------: | :--------------: | :--------------: |
 | Alaaeddin ALMAJJO | Ayman DOULKOM        | Pape THIAM  |
+| 22001993  | 00000000           | 22009010  |
 | [@aladinMJ](https://github.com/aladinMJ) | [@ayman-h226](https://github.com/ayman-h226)        | [@mayel15](https://github.com/mayel15)  |
 | alaaeddin.almajjo@uphf.fr  | ayman.doulkom@uphf.fr           | papemayeldiagne.thiam@uphf.fr  |
-| 22001993  | 00000000           | 22009010  |
 
 # Technos utilisées
 
@@ -29,7 +29,21 @@ Les livrables comprennent :
 - le code source des différents modules
 - le paramétrage du service Kafka
 - le docker-compose `docker-compose.yml` adapté
-- le script sh `create-topics` pour la creation des topics Kafka 
+- le script sh `create-topics.sh` pour la creation des topics Kafka 
 - le script SQL `database-creation.sql` pour la création de la base de données
 - le `rapport` de projet répondant aux questions posées
 - et ce `README.md` contenant les informations sur le projet et l'équipe de développement
+
+# Console text
+## Commandes disponibles
+- `get_all_patients` : retourne tous les patients
+- `get_patient_by_pid` : retourne l'identité complète d'un patient par son identifiant PID-3
+- get_patient_by_name : retourne l'identité d'un patient par son nom
+- `get_patient_stay_by_pid` : retourne les séjours d'un patient par son identifiant PID-3
+- `get_patient_movements_by_sid` : retourne tous les mouvements d'un patient par le numéro de séjour
+- `export` : exporte les données de la base de données en JSON dans un fichier
+- `help` : affiche la liste des commandes et une explication comme ci-dessus
+- `exit` : quitte la console
+
+## Demo 
+![alt text](console-demo.gif)
