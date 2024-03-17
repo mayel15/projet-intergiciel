@@ -34,7 +34,16 @@ Les livrables comprennent :
 - le `rapport` de projet répondant aux questions posées
 - et ce `README.md` contenant les informations sur le projet et l'équipe de développement
 
-# Console text
+# Console text 
+
+## Run
+
+- Cloner le projet avec `git clone https://github.com/mayel15/projet-intergiciel.git`
+- Exécuter à la racine du projet `docker-compose up -d` qui va permettre de démarrer mirth connect (au port `8444`) et une base de données postgresql version 16, la database est stockée en local, elle est accessible via le port `5435` en externe.
+
+- Ouvrir les deux sous projets (dossiers) séparément `consumer2-producer3` et `producer2-consumer3-cs`; et les lancer séparament
+- La console text sera disponible au niveau du run du projet `producer2-consumer3-cs`
+  
 ## Commandes disponibles
 - `get_all_patients` : retourne tous les patients
 - `get_patient_by_pid` : retourne l'identité complète d'un patient par son identifiant PID-3
@@ -47,3 +56,5 @@ Les livrables comprennent :
 
 ## Demo de la console text
 ![console demo](assets/console-demo.gif)
+
+
