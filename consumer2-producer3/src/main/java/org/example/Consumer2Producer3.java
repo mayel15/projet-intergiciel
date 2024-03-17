@@ -257,7 +257,7 @@ public class Consumer2Producer3 {
     }
 
     private ArrayList<String> getHelp() {
-        System.out.print("Execution de la commande help ...");
+        System.out.println("Execution de la commande help ...");
         ArrayList<String> helpCommands = new ArrayList<>();
         helpCommands.add("Liste des commandes disponibles :");
         helpCommands.add("- get_all_patients : retourne tous les patients");
