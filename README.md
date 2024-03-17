@@ -10,13 +10,13 @@
 
 # Technos utilisées
 
-<a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="100" height="100"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://imgs.search.brave.com/vUNX5vHj053oH8GdZXva9X8byPP-0OQMCLXSgv3rLtU/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMud2lraWEubm9j/b29raWUubmV0L2xv/Z29wZWRpYS9pbWFn/ZXMvZC9kOC9BcGFj/aGVfS2Fma2FfTG9n/by5qcGcvcmV2aXNp/b24vbGF0ZXN0L3Nj/YWxlLXRvLXdpZHRo/LWRvd24vMzAwP2Ni/PTIwMjIwNzAzMDIz/NjEz.jpeg" alt="java" width="260" height="100"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://imgs.search.brave.com/IJhQoF6ymM5JPT7_Jn6SHWO8dj8NggPgkQE1gYJ72zo/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/bWVkaXRlY3MuY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy9taXJ0/aC1sb2dvLndlYnA" alt="java" width="175" height="100"/> </a>
+<a href="https://github.com/nextgenhealthcare/connect" target="_blank" rel="noreferrer"> <img src="https://imgs.search.brave.com/IJhQoF6ymM5JPT7_Jn6SHWO8dj8NggPgkQE1gYJ72zo/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/bWVkaXRlY3MuY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy9taXJ0/aC1sb2dvLndlYnA" alt="mirth connect" width="175" height="100"/> </a> <a href="https://kafka.apache.org/" target="_blank" rel="noreferrer"> <img src="https://imgs.search.brave.com/vUNX5vHj053oH8GdZXva9X8byPP-0OQMCLXSgv3rLtU/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMud2lraWEubm9j/b29raWUubmV0L2xv/Z29wZWRpYS9pbWFn/ZXMvZC9kOC9BcGFj/aGVfS2Fma2FfTG9n/by5qcGcvcmV2aXNp/b24vbGF0ZXN0L3Nj/YWxlLXRvLXdpZHRo/LWRvd24vMzAwP2Ni/PTIwMjIwNzAzMDIz/NjEz.jpeg" alt="kafka" width="260" height="100"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="100" height="100"/> </a>  <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="100" height="100"/> </a> </a> <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="100" height="100"/> </a>
 
 # Description du projet 
 
 Ce projet consiste à développer différentes applications, utilisant les API Kafka-Client et/ou le Framework SpringBoot, pour la manipulation de fichiers HL7 de type ADT. L'objectif est de lire, parser et formater ces fichiers en format JSON, puis de les transporter via un topic Kafka vers une base de données PostgreSQL.
 
-![alt text](synoptique-echanges.png)
+![synoptique des echanges](assets/synoptique-echanges.png)
 
 L'architecture comprend plusieurs modules, notamment des producteurs et des consommateurs Kafka, ainsi qu'une application console permettant de requêter la base de données. Les échanges se font via des flux d'événements Kafka.
 
@@ -45,5 +45,5 @@ Les livrables comprennent :
 - `help` : affiche la liste des commandes et une explication comme ci-dessus
 - `exit` : quitte la console
 
-## Demo 
-![alt text](console-demo.gif)
+## Demo de la console text
+![console demo](assets/console-demo.gif)
