@@ -6,7 +6,7 @@
 | Alaaeddin ALMAJJO | Ayman DOULKOM        | Pape THIAM  |
 | 22001993  | 22008795           | 22009010  |
 | [@aladinMJ](https://github.com/aladinMJ) | [@ayman-h226](https://github.com/ayman-h226)        | [@mayel15](https://github.com/mayel15)  |
-| alaaeddin.almajjo@uphf.fr  | ayman.doulkom@uphf.fr           | papemayeldiagne.thiam@uphf.fr  |
+| alaaeddin.almajjo@uphf.fr  | aymanbenewende.doulkom@uphf.fr           | papemayeldiagne.thiam@uphf.fr  |
 
 # Technos utilisées
 
@@ -28,9 +28,9 @@ Les principales fonctionnalités incluent:
 Les livrables comprennent :
 - le code source des différents modules
 - le paramétrage du service Kafka
-- le docker-compose `docker-compose.yml` adapté
-- le script sh `create-topics.sh` pour la creation des topics Kafka 
-- le script SQL `database.sql` pour la création de la base de données
+- le docker-compose `kafka-init/docker-compose.yml` adapté
+- le script sh `kafka-init/create-topics.sh` pour la creation des topics Kafka
+- le script SQL `script-sql/database.sql` pour la création de la base de données
 - le `rapport` de projet répondant aux questions posées
 - et ce `README.md` contenant les informations sur le projet et l'équipe de développement
 
@@ -39,8 +39,8 @@ Les livrables comprennent :
 ## Run
 
 - Cloner le projet avec `git clone https://github.com/mayel15/projet-intergiciel.git`
-- Exécuter à la racine du projet `docker-compose up -d` qui va permettre de démarrer mirth connect (au port `8444`), une base de données postgresql version 16, la database est stockée en local, elle est accessible via le port `5435` en externe, et va créer les topics `topic1`, `topic2`, `topic3` dans **Kafka**
-- Exécuter le script `database.sql` dans la base de données pour la création des tables. Décommenter la partie de peupleument de la satabase, si c'est pour travailler de manière indépendante des données de récupéreées depuis **mirth** 
+- Exécuter dans le dossier `kafka-init` du projet `docker-compose up -d` qui va permettre de démarrer mirth connect (au port `8444`), une base de données postgresql version 16, la database est stockée en local, elle est accessible via le port `5435` en externe, et va créer les topics `topic1`, `topic2`, `topic3` dans **Kafka**
+- Exécuter le script `script-sql/database.sql` dans la base de données pour la création des tables. Décommenter la partie de peupleument de la satabase, si c'est pour travailler de manière indépendante des données de récupéreées depuis **mirth**
 - Ouvrir les deux sous projets (dossiers) séparément `consumer2-producer3` et `producer2-consumer3-cs`; et les lancer séparament
 - La console text sera disponible au niveau du run du projet `producer2-consumer3-cs`
   

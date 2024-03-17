@@ -102,7 +102,7 @@ public class Consumer2Producer3 {
                 data = getPatientByName(value);
                 break;
             case "get_patient_stay_by_pid":
-                data =getPatientStayByPid(value);
+                data = getPatientStayByPid(value);
                 break;
             case "get_patient_movements_by_sid":
                 data = getPatientMovementsBySid(value);
@@ -128,7 +128,7 @@ public class Consumer2Producer3 {
     // recupere tous les données des patients
     private ArrayList<String> getAllPatients() throws SQLException {
         System.out.println("Execution de la commande 'get_all_patients' ...");
-        String query = "SELECT * FROM personsimple";
+        String query = "SELECT * FROM personsimpleconsom";
         try (PreparedStatement statement = connection.prepareStatement(query);
              ResultSet resultSet = statement.executeQuery()) {
             ArrayList<String> patientsData = new ArrayList<>();
@@ -155,7 +155,7 @@ public class Consumer2Producer3 {
     // recupere les donnees d'un patient par son pid
     private ArrayList<String> getPatientByPid(String patientId) throws SQLException {
         System.out.println("Execution de la commande: get_patient_by_pid " + patientId);
-        String query = "SELECT * FROM personsimple WHERE person_id =" + "'" + patientId + "'";
+        String query = "SELECT * FROM personsimpleconsom WHERE person_id =" + "'" + patientId + "'";
         try (PreparedStatement statement = connection.prepareStatement(query);
              ResultSet resultSet = statement.executeQuery()) {
             ArrayList<String> patientsData = new ArrayList<>();
@@ -182,7 +182,7 @@ public class Consumer2Producer3 {
     // recupere les données d'un patient par son nom
     private ArrayList<String> getPatientByName(String name) {
         System.out.println("Execution de la commande: get_patient_by_name " + name);
-        String query = "SELECT * FROM personsimple WHERE nom =" + "'" + name + "'";
+        String query = "SELECT * FROM personsimpleconsom WHERE nom =" + "'" + name + "'";
         try (PreparedStatement statement = connection.prepareStatement(query);
              ResultSet resultSet = statement.executeQuery()) {
             ArrayList<String> patientsData = new ArrayList<>();
@@ -208,7 +208,7 @@ public class Consumer2Producer3 {
 
     private ArrayList<String> getPatientStayByPid(String patientId) {
         System.out.println("Execution de la commande: get_patient_stay_by_pid " + patientId);
-        String query = "SELECT * FROM stay WHERE person_id =" + "'" + patientId + "'";
+        String query = "SELECT * FROM stayconsom WHERE person_id =" + "'" + patientId + "'";
         try (PreparedStatement statement = connection.prepareStatement(query);
              ResultSet resultSet = statement.executeQuery()) {
             ArrayList<String> stayData = new ArrayList<>();
@@ -233,7 +233,7 @@ public class Consumer2Producer3 {
 
     private ArrayList<String> getPatientMovementsBySid(String stayId) {
         System.out.println("Execution la commande: get_patient_movements_by_sid " + stayId);
-        String query = "SELECT * FROM movements WHERE numero_sejour = " + "'" + stayId + "'";
+        String query = "SELECT * FROM movementsconsom WHERE numero_sejour = " + "'" + stayId + "'";
         try (PreparedStatement statement = connection.prepareStatement(query);
              ResultSet resultSet = statement.executeQuery()) {
             ArrayList<String> movementsData = new ArrayList<>();
@@ -278,10 +278,10 @@ public class Consumer2Producer3 {
 
         try {
             // Récupérer les données de chaque table
-            fetchDataFromTable( "PersonSimple", allTablesData);
-            fetchDataFromTable("Address", allTablesData);
-            fetchDataFromTable( "Movements", allTablesData);
-            fetchDataFromTable( "Stay", allTablesData);
+            fetchDataFromTable( "PersonSimpleConsom", allTablesData);
+            fetchDataFromTable("AddressConsom", allTablesData);
+            fetchDataFromTable( "MovementsConsom", allTablesData);
+            fetchDataFromTable( "StayConsom", allTablesData);
 
             return allTablesData;
         } catch (SQLException e) {
